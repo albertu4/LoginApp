@@ -13,6 +13,9 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    let userName = "User"
+    let userPassword = "12345678"
+    
     var welcome: String!
     
     override func viewDidLoad() {
@@ -30,6 +33,10 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed() {
+        if userNameTF.text != userName || passwordTF.text != userPassword {
+        showAlert(title: "Invalid login or password",
+                  and: "Please, enter correct name and password")
+        } else { return }
     }
     
     @IBAction func forgotNameButtonPressed() {
@@ -38,6 +45,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func ForgotPasswordButtonPressed() {
         showAlert(title: "Oops!", and: "Your password is 12345678")
+    }
+    
+    @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
     
     private func showAlert (title: String, and message: String) {

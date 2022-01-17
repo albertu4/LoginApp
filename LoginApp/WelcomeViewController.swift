@@ -18,8 +18,4 @@ class WelcomeViewController: UIViewController {
         guard let text = welcome else { return }
         welcomeUserText.text = "Welcome, \(text)"
     }
-    
-    @IBAction func logOutButtonPressed() {
-    }
-    
 }

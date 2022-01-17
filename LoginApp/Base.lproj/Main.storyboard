@@ -119,7 +119,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutButtonPressed" destination="mrq-2t-VWH" eventType="touchUpInside" id="9OK-09-9Fn"/>
+                                    <segue destination="KYY-ef-U5g" kind="unwind" unwindAction="unwindFor:" id="Pio-jz-vHA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-dq-spm">
@@ -151,6 +151,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkh-nd-TVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="KYY-ef-U5g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="786" y="68"/>
         </scene>
