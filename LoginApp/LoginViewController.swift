@@ -7,22 +7,23 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
- 
+    //MARK: IB Outlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    //User Data
     let userName = "User"
     let userPassword = "12345678"
     
-    var welcome: String!
-    
+    //MARK: Overrides Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userNameTF.delegate = self
         passwordTF.delegate = self
+        
         passwordTF.enablesReturnKeyAutomatically = true
     }
     
@@ -36,6 +37,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         welcomeVC.welcome = userNameTF.text
     }
 
+    //MARK: IB Actions
     @IBAction func loginButtonPressed() {
         if userNameTF.text != userName || passwordTF.text != userPassword {
         showAlert(title: "Invalid login or password",
@@ -52,8 +54,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     @IBAction func unwind(for unwindSegue: UIStoryboardSegue) {
-        userNameTF.text = ""
-        passwordTF.text = ""
+        userNameTF.text?.removeAll()
+        passwordTF.text?.removeAll()
+    }
+    
+    //MARK: Methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTF:
+            passwordTF.becomeFirstResponder()
+        default:
+            loginButtonPressed()
+            performSegue(withIdentifier: "First", sender: Any?.self)
+        }
+        return true
     }
     
     private func showAlert (title: String, and message: String) {
@@ -63,21 +77,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             preferredStyle: .alert
         )
         let okAction = UIAlertAction(title: "Ok", style: .default) {
-            _ in self.passwordTF.text = ""
+            _ in self.passwordTF.text?.removeAll()
         }
         
         alert.addAction(okAction)
         present(alert, animated: true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case userNameTF:
-            passwordTF.becomeFirstResponder()
-        default:
-            loginButtonPressed()
-        }
-        return true
     }
 
 }
