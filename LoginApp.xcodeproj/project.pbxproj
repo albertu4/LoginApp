@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74381B9127952B8400BF73DD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74381B9027952B8400BF73DD /* WelcomeViewController.swift */; };
+		74381B952795954300BF73DD /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74381B942795954300BF73DD /* KeyboardViewController.swift */; };
 		747D633F27950BD3009B45DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D633E27950BD3009B45DA /* AppDelegate.swift */; };
 		747D634127950BD3009B45DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D634027950BD3009B45DA /* SceneDelegate.swift */; };
 		747D634327950BD3009B45DA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747D634227950BD3009B45DA /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		74381B9027952B8400BF73DD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		74381B942795954300BF73DD /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		747D633B27950BD3009B45DA /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		747D633E27950BD3009B45DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		747D634027950BD3009B45DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				747D633E27950BD3009B45DA /* AppDelegate.swift */,
 				747D634027950BD3009B45DA /* SceneDelegate.swift */,
 				747D634227950BD3009B45DA /* LoginViewController.swift */,
+				74381B942795954300BF73DD /* KeyboardViewController.swift */,
 				74381B9027952B8400BF73DD /* WelcomeViewController.swift */,
 				747D634427950BD3009B45DA /* Main.storyboard */,
 				747D634727950BD4009B45DA /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				747D634327950BD3009B45DA /* LoginViewController.swift in Sources */,
+				74381B952795954300BF73DD /* KeyboardViewController.swift in Sources */,
 				74381B9127952B8400BF73DD /* WelcomeViewController.swift in Sources */,
 				747D633F27950BD3009B45DA /* AppDelegate.swift in Sources */,
 				747D634127950BD3009B45DA /* SceneDelegate.swift in Sources */,

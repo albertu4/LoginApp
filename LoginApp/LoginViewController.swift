@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate{
 
  
     @IBOutlet var userNameTF: UITextField!
@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTF.delegate = self
+        passwordTF.delegate = self
+        passwordTF.enablesReturnKeyAutomatically = true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -58,9 +62,22 @@ class LoginViewController: UIViewController {
             message: message,
             preferredStyle: .alert
         )
-        let okAction = UIAlertAction(title: "Ok", style: .default)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {
+            _ in self.passwordTF.text = ""
+        }
+        
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-}
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTF:
+            passwordTF.becomeFirstResponder()
+        default:
+            loginButtonPressed()
+        }
+        return true
+    }
 
+}
