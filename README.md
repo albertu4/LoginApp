@@ -17,4 +17,4 @@ the password.
 
 **WHAT"S NEW I USED:** UIStoryboardSegue, UIAlertController, UIAlertAction, UITextField, touchesBegan
 
-![Simulator Screen Recording - iPhone 13 - 2022-10-06 at 10 26 46](https://user-images.githubusercontent.com/97275239/194200627-bed2e56f-bd7c-42ec-a3a8-60c8b49c1410.gif)
+![Simulator Screen Recording - iPhone 13 - 2022-10-06 at 11 05 41](https://user-images.githubusercontent.com/97275239/194204950-f43c55a1-d03e-4389-b869-9c443ccce4b5.gif)
